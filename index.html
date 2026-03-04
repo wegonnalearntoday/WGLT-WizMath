@@ -25,24 +25,16 @@
       }
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
-  arguments: [],
-  dataUrl: "Build/WGLT-Tracing-Full.data",
-  frameworkUrl: "Build/WGLT-Tracing-Full.framework.js",
-  codeUrl: "Build/WGLT-Tracing-Full.wasm",
-  streamingAssetsUrl: "StreamingAssets",
-  companyName: "Every Dollar Countz LLC",
-  productName: "Tracing Demo",
-  productVersion: "1.0",
-}).then((unityInstance) => {
-
-  // Notify Wix that the game finished loading
-  if (window.parent) {
-    window.parent.postMessage({ type: "WGLT_READY" }, "*");
-  }
-
-}).catch((message) => {
-  alert(message);
-});
+        dataUrl: "Build/WGLT-WizMath.data",
+        frameworkUrl: "Build/WGLT-WizMath.framework.js",
+        codeUrl: "Build/WGLT-WizMath.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "WGLT",
+        productName: "Math - Tutor",
+        productVersion: "1.0",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
     </script>
   </body>
 </html>
